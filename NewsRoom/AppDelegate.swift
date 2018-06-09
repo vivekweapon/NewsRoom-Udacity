@@ -8,15 +8,41 @@
 
 import UIKit
 import CoreData
+import XCGLogger
+import Reachability
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let log = XCGLogger.default
+    var newsModalArray = [NewsModal]()
+    var searchnewsModalArray = [NewsModal]()
+    var newsImagesArray = [UIImage]()
+    var searchImagesArray = [UIImage]()
+    let stack = CoreDataStack(modelName: "NewsRoom")!
+    let reachability = Reachability()!
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+         log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLevel: .debug)
+        reachability.whenUnreachable =
+        { _ in
+                
+                NewsRoomAlert.shared.presentAlertView(ViewController: self.window?.rootViewController, alertTitle: "Internet Connection.", alertMessage: "Please check Network.")
+        }
+        
+        do {
+            try reachability.startNotifier()
+        }
+        catch {
+            log.debug("Unable to start notifier")
+        }
         return true
     }
 

@@ -1,0 +1,31 @@
+PODS:
+  - Kingfisher (4.6.1)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - ParallaxHeader (2.0.0)
+  - ReachabilitySwift (4.1.0)
+  - SVProgressHUD (2.2.2)
+  - XCGLogger (6.0.2):
+    - XCGLogger/Core (= 6.0.2)
+  - XCGLogger/Core (6.0.2):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - Kingfisher (~> 4.0)
+  - ParallaxHeader (~> 2.0.0)
+  - ReachabilitySwift
+  - SVProgressHUD
+  - XCGLogger (~> 6.0.2)
+
+SPEC CHECKSUMS:
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  ParallaxHeader: fb6ee97915626454f3c029a97b424f79a777c642
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
+
+PODFILE CHECKSUM: 5328e12c88cbc982994113e943d8d4ba7665c5d3
+
+COCOAPODS: 1.4.0

@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct NewsModal
-{
+struct NewsModal {
     var author = ""
     var description = ""
     var publishedAt = ""
@@ -17,8 +16,7 @@ struct NewsModal
     var url = ""
     var urlToImage = ""
     
-    init(dictionary:[String:AnyObject])
-    {
+    init(dictionary:[String:AnyObject]) {
         author = (nullToNil(value: dictionary["author"]!))
         description = (nullToNil(value: dictionary["description"]!))
         publishedAt = (nullToNil(value: dictionary["publishedAt"]!))
@@ -30,7 +28,7 @@ struct NewsModal
     
     func nullToNil(value : AnyObject) -> String {
         if value is NSNull {
-            return "No"
+            return "Nil Response From Api."
         } else {
             return String(describing:value)
         }

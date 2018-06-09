@@ -11,10 +11,17 @@ import UIKit
 
 class NewsCell:UITableViewCell
 {
-    override func awakeFromNib()
-    {
+    @IBOutlet var newsImageView:UIImageView!
+    @IBOutlet var titleTextView:UITextView!
+    @IBOutlet var activityindicatorView:UIActivityIndicatorView!
+
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if(newsImageView.image == nil) {
+            activityindicatorView.startAnimating()
+            newsImageView.image = UIImage(named:"noimage_placeholder")
+        }
         
     }
 }

@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+class NewsDetailCell:UITableViewCell
+{
+    
+    @IBOutlet var author:UILabel!
+    @IBOutlet var publishedAt:UILabel!
+    @IBOutlet var title:UILabel!
+    @IBOutlet var descriptiontextView:UITextView!
+    @IBOutlet var newsItemImageView:UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+    }
+}
